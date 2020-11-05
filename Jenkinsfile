@@ -12,7 +12,7 @@ pipeline {
      
     stage('Test') {
       steps {
-         sh 'npm build-storybook'
+         sh 'yarn chromatic --project-token=84svyadsh4w'
       }
     }      
   }
