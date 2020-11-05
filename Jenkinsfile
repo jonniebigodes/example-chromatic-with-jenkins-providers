@@ -10,7 +10,12 @@ pipeline {
       }
     }
      
-    stage('Test') {
+    stage('Chromatic Deployment') {
+      when {
+          anyOf {
+            branch 'main'
+          }
+      }
       steps {
          sh 'yarn chromatic --project-token=84svyadsh4w'
       }
