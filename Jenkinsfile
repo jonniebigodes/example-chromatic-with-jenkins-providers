@@ -14,9 +14,6 @@ pipeline {
       environment {
         CHROMATIC_PROJECT_TOKEN = '84svyadsh4w'
       }
-      when {
-          branch '*/main'
-      }
       steps {
          sh "yarn chromatic --project-token=${CHROMATIC_PROJECT_TOKEN}"
       }
