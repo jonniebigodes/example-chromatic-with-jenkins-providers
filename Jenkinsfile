@@ -11,6 +11,9 @@ pipeline {
     }
      
     stage('Chromatic Deployment') {
+      when {
+        branch 'main'
+      }
       environment {
         CHROMATIC_PROJECT_TOKEN = '84svyadsh4w'
       }
