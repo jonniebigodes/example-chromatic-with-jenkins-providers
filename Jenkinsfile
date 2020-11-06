@@ -11,13 +11,16 @@ pipeline {
     }
      
     stage('Chromatic Deployment') {
+      environment {
+        CHROMATIC_PROJECT_TOKEN = '84svyadsh4w'
+      }
       when {
           anyOf {
             branch 'main'
           }
       }
       steps {
-         sh 'yarn chromatic --project-token=84svyadsh4w'
+         sh "yarn chromatic --project-token=${CHROMATIC_PROJECT_TOKEN}"
       }
     }      
   }
