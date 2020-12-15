@@ -18,7 +18,7 @@ pipeline {
         CHROMATIC_PROJECT_TOKEN = '84svyadsh4w'
       }
       steps {
-         sh "yarn chromatic --project-token=${CHROMATIC_PROJECT_TOKEN}"
+         sh "yarn chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} --auto-accept-changes"
       }
     }      
   }
