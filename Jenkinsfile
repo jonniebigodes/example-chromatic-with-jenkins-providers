@@ -10,7 +10,7 @@ pipeline {
       }
     }
      
-    stage('Chromatic Deployment') {
+    stage('Publish to Chromatic') {
       when {
         branch 'main'
       }
